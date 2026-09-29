@@ -1,0 +1,73 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Videos</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f5f5f5;
+        text-align:center;
+        padding:40px;
+    }
+    .container{
+        max-width:700px;
+        margin:auto;
+        background:#fff;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,.1);
+    }
+    .video-btn{
+        display:block;
+        width:100%;
+        margin:10px 0;
+        padding:15px;
+        font-size:16px;
+        cursor:pointer;
+        border:none;
+        border-radius:5px;
+        background:#007bff;
+        color:white;
+    }
+    .video-btn:hover{
+        background:#0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Protected Video Access</h2>
+    <p>Select a video and enter password.</p>
+
+    <button class="video-btn" onclick="openVideo('https://drive.google.com/file/d/1SMx64nki73U0OVIWhZn5LCT8uyfcbC88/view')">Video 1</button>
+
+    <button class="video-btn" onclick="openVideo('https://drive.google.com/file/d/1V5cueSyI6MMvDxcKQHBJ86Q2C8Do28Gr/view')">Video 2</button>
+
+    <button class="video-btn" onclick="openVideo('https://drive.google.com/file/d/1eD3JCgtbniRnxSi7Yz_2C-S0O6jtnPOu/view')">Video 3</button>
+
+    <button class="video-btn" onclick="openVideo('https://drive.google.com/file/d/13nuSynM7kYjKaoAGf1GdplrVwEyaLpzS/view')">Video 4</button>
+
+    <button class="video-btn" onclick="openVideo('https://drive.google.com/file/d/1CVglvi1-LbFR8lHygEN1_oiq4Vw8t7P3/view')">Video 5</button>
+
+    <button class="video-btn" onclick="openVideo('https://drive.google.com/file/d/1DoJ-s_opM9vRflt5eRqHf9Jz8AslPRNB/view')">Video 6</button>
+</div>
+
+<script>
+function openVideo(url){
+    const password = prompt("Enter Password:");
+
+    if(password === "Chinki@2001"){
+        window.open(url, "_blank");
+    } else if(password !== null){
+        alert("Incorrect Password!");
+    }
+}
+</script>
+
+</body>
+</html>
+```
